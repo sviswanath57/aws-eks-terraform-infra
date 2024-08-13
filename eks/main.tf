@@ -42,3 +42,14 @@ module "eks" {
 
   addons = var.addons
 }
+
+# resource "aws_dynamodb_table" "tf_lock_testing_state_ddb_table" {
+#   name         = "tf-lock-testing-state-ddb-table"
+#   billing_mode = "PAY_PER_REQUEST"
+#   hash_key     = "LockID"
+
+#   attribute {
+#     name = "LockID"
+#     type = "S"
+#   }
+# }
